@@ -1,0 +1,160 @@
+/* Dashboard Specific Styles */
+
+/* Chart containers */
+.chart-area {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+.chart-pie {
+    position: relative;
+    height: 250px;
+    width: 100%;
+}
+
+/* Stats card animations */
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 2rem 0 rgba(58, 59, 69, 0.2) !important;
+}
+
+/* Sidebar animation */
+.sidebar {
+    transition: all 0.3s;
+}
+
+/* Table row hover effects */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+/* Badge animations */
+.badge {
+    transition: all 0.2s ease-in-out;
+}
+
+.badge:hover {
+    transform: scale(1.05);
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Status indicators */
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.status-habis {
+    background-color: var(--danger);
+}
+
+.status-menipis {
+    background-color: var(--warning);
+}
+
+.status-perhatian {
+    background-color: var(--info);
+}
+
+.status-aman {
+    background-color: var(--success);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .sidebar,
+    .btn-toolbar,
+    .alert {
+        display: none !important;
+    }
+    
+    .card {
+        border: 1px solid #000 !important;
+        box-shadow: none !important;
+    }
+    
+    main {
+        margin-left: 0 !important;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .bg-light {
+        background-color: #343a40 !important;
+    }
+    
+    .text-dark {
+        color: #f8f9fa !important;
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .chart-area {
+        height: 250px;
+    }
+    
+    .chart-pie {
+        height: 200px;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .card {
+        border: 2px solid #000;
+    }
+    
+    .btn {
+        border-width: 2px;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .card,
+    .badge {
+        transition: none;
+    }
+}
